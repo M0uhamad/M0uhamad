@@ -1,0 +1,84 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+// Room class
+class Room {
+  private:
+    string name;
+    string description;
+    vector<string> items;
+  public:
+    Room(string name, string description) {
+      this->name = name;
+      this->description = description;
+    }
+    string getName() {
+      return this->name;
+    }
+    string getDescription() {
+      return this->description;
+    }
+    void addItem(string item) {
+      this->items.push_back(item);
+    }
+    vector<string> getItems() {
+      return this->items;
+    }
+};
+
+// Game class
+class Game {
+  private:
+    vector<Room> rooms;
+    vector<string> inventory;
+  public:
+    void addRoom(Room room) {
+      this->rooms.push_back(room);
+    }
+    Room getCurrentRoom() {
+      return this->rooms[0];
+    }
+    void move(string direction) {
+      Room currentRoom = getCurrentRoom();
+      if (direction == "north") {
+        for (int i = 0; i < rooms.size(); i++) {
+          if (rooms[i].getName() == currentRoom.getName() + " North") {
+            rooms.insert(rooms.begin(), rooms[i]);
+            rooms.erase(rooms.begin()+i+1);
+            return;
+          }
+        }
+        cout << "You can't go that way." << endl;
+      } else if (direction == "south") {
+        for (int i = 0; i < rooms.size(); i++) {
+          if (rooms[i].getName() == currentRoom.getName() + " South") {
+            rooms.insert(rooms.begin(), rooms[i]);
+            rooms.erase(rooms.begin()+i+1);
+            return;
+          }
+        }
+        cout << "You can't go that way." << endl;
+      } else if (direction == "east") {
+        for (int i = 0; i < rooms.size(); i++) {
+          if (rooms[i].getName() == currentRoom.getName() + " East") {
+            rooms.insert(rooms.begin(), rooms[i]);
+            rooms.erase(rooms.begin()+i+1);
+            return;
+          }
+        }
+        cout << "You can't go that way." << endl;
+      } else if (direction == "west") {
+        for (int i = 0; i < rooms.size(); i++) {
+          if (rooms[i].getName() == currentRoom.getName() + " West") {
+            rooms.insert(rooms.begin(), rooms[i]);
+            rooms.erase(rooms.begin()+i+1);
+            return;
+          }
+        }
+        cout << "You can't go that way." << endl;
+      }
+    }
+    void pickUp(string item
